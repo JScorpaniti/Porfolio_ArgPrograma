@@ -1,0 +1,22 @@
+<div class="contenedor">
+    <h1>Experiencia</h1>
+    <hr>
+    <div class="row" >
+        <div class="presentacion">
+          <div class="col carta">
+            
+            <article class="experiencia" *ngFor="let experiencia of myExperience">
+            <div class="name-description">
+            <h4>{{experiencia.empresa}}</h4>
+              <p>{{experiencia.tarea}}</p>
+            </div>    
+            </article>
+          </div>
+          <hr>
+          <div class="btn-edit"> 
+            <button>Editar experiencia</button>
+          </div>
+             
+        </div>
+      </div>
+</div>

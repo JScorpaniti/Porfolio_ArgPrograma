@@ -1,0 +1,199 @@
+button {
+    height: min-content;
+    margin-top: 10px;
+    align-items: flex-end;
+    width: vw;
+}
+
+.btn-edit {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 16px;
+}
+
+.btn-edit button {
+    
+  background: #0f2936;
+  background-image: -webkit-linear-gradient(top, #0f2936, #135c80);
+  background-image: -moz-linear-gradient(top, #0f2936, #135c80);
+  background-image: -ms-linear-gradient(top, #0f2936, #135c80);
+  background-image: -o-linear-gradient(top, #0f2936, #135c80);
+  background-image: linear-gradient(to bottom, #0f2936, #135c80);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border: 1px solid #0a1422;
+  border-radius: 8px;
+  font-family: Georgia;
+  color: #fff;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  transition: background-image 1s;
+}
+
+.btn-edit button:hover {
+    
+  background: #135c80;
+  background-image: -webkit-linear-gradient(top, #135c80, #0f2936);
+  background-image: -moz-linear-gradient(top, #135c80, #0f2936);
+  background-image: -ms-linear-gradient(top, #135c80, #0f2936);
+  background-image: -o-linear-gradient(top, #135c80, #0f2936);
+  background-image: linear-gradient(to bottom, #135c80, #0f2936);
+  text-decoration: none;
+
+}
+#banner {
+    margin: auto auto 0 auto;
+    width: 100%;
+    margin: auto;
+    
+}
+.banner {
+    background: url(https://c0.wallpaperflare.com/preview/111/43/764/code-coder-codes-coding.jpg);
+    background-size: cover;
+    margin: auto;
+    border-radius: 20px;
+    height: 20vw;
+    min-height: 200px;
+}
+
+label {
+    color: #fff;
+}
+
+/*PRESENTACION*/
+.contenedor {
+    border: 1px solid #777;
+    padding: 0px 0px 0px 0px;
+    margin-top: 15vh;
+    border-radius: 22px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10vh;
+    background-color: #0f2936;
+    transition: box-shadow .5s;
+    min-width: 280px;
+}
+
+.contenedor:hover {
+    box-shadow: 0px 0px 16px 0px #222;
+    transition: box-shadow .5s;
+}
+
+.acerca-de-mi {
+    font-family: 'Sono', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 275px;
+    margin: 75px auto 0 auto;
+    color: #fff;
+    box-sizing: content-box;
+}
+
+.acerca-de-mi h4 {
+    width: 95%;
+    margin: auto;
+    font-weight: 800;
+    line-height: 30px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.acerca-de-mi p {
+    width: 95%;
+    margin: auto;
+    font-weight: 100;
+    line-height: 20px;
+    padding: auto;
+    text-align: center;
+
+}
+
+.acerca-de-mi h5 {
+    width: 70%;
+    margin: auto;
+    font-weight: 600;
+    padding: auto;
+    text-align: center;
+    min-width: 236px;
+}
+
+.acerca-de-mi p {
+    font-size: 16px;
+    line-height: 45px 10px;
+    margin-bottom: 16px;
+    max-width: 50vw;
+}
+
+.avatar-cont {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    margin: -90px;
+    justify-content: flex-start;
+    border-radius: 50%;
+    justify-content: center;
+}
+.avatar-cont i {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 5px;
+    height: 160px;
+    display: flex;
+    align-items: flex-end;
+}
+.avatar {
+    height: 180px;
+    border-radius: 50%;
+}
+
+.presentacion {
+    min-width: 260px;
+    justify-content: center;
+    width: 95%;
+    display: flex;
+    margin: auto;
+    background-position: center center;
+}
+
+@media only screen and (max-width:600px){
+    .presentacion {
+        margin: auto;
+    }
+    .acerca-de-mi {
+        margin-left: auto;
+    }
+
+    .acerca-de-mi h4 {
+        width: 90%;
+        margin: auto;
+        font-weight: 800;
+        line-height: 30px;
+        margin-bottom: 0;
+        min-width: 265px;
+        padding: auto;
+        text-align: center;
+    }
+    
+    .acerca-de-mi p {
+        width: 90%;
+        margin: auto;
+        font-weight: 100;
+        line-height: 20px;
+        padding: auto;
+        text-align: center;
+    
+    }
+    
+    .acerca-de-mi h5 {
+        width: 80%;
+        margin: auto;
+        font-weight: 600;
+        padding: auto;
+        text-align: center;
+        min-width: 236px;
+    }
+}
+
+

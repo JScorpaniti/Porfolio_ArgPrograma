@@ -1,0 +1,24 @@
+<div class="contenedor">
+    <h1>Educacion</h1>
+    <hr>
+    <div class="row" >
+        <div class="presentacion">
+          <div class="col carta">
+            
+            <article class="experiencia" *ngFor="let educacion of myEducation">
+            <div class="name-description">
+            <h4>{{educacion.school}}</h4>
+              <p>{{educacion.career}}</p>
+              <p><time>{{educacion.start}}</time> - <time>{{educacion.end}}</time></p>
+            </div>    
+            </article>
+          </div>
+          <hr>
+          <div class="btn-edit"> 
+            <button>Editar educacion</button>
+          </div>
+             
+        </div>
+      </div>
+</div>
+

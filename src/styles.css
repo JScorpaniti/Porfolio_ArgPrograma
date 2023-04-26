@@ -1,1 +1,286 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    width: 100%;
+    background-color: #fff;
+}
+
+.contenedor {
+    border: 1px solid #777;
+    padding: 0px 0px 0px 0px;
+    margin-top: 15vh;
+    border-radius: 22px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10vh;
+    background-color: #0f2936;
+    transition: box-shadow .5s;
+    min-width: 280px;
+}
+
+.contenedor:hover {
+    box-shadow: 0px 0px 16px 0px #222;
+    transition: box-shadow .5s;
+}
+
+/* hr {
+    opacity: 1;
+    color: #0f2936;
+}
+/* body {
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUQEBASEBAPDw0PEBAPDw8PDw8PFREWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0NGg0PES0ZFxkrKysrNysrNysrLSsrKysrKysrNysrLSsrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAKgBLAMBIgACEQEDEQH/xAAbAAADAQEBAQEAAAAAAAAAAAABAgMEAAUGB//EADAQAAICAQMDAwMDAwUBAAAAAAABAhEDEiExBEFRE2FxgZGhBSLwFELxUrHB0eEy/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8A/SVi9iqgeLLrJPu/uD+pn5YHtqBSKZ4E/wBSyLbl/FnQ67M+aX0A+hUR1E8LB1E1zI34eol3aYG9pCNeBVmFlmfgC0F5GcDI87L4s6fOzAZKhkNQJRANJ/ItAGQHJIFBo5oANE2ilAYEgqFnFIIDo4kilgoeEQHxwrdglkC5EpAJkl4IzbL0BxTAxObOU2+5fJhRN4l7gdFh1C0JJgU1kp5LYrTZWGOgDiizRoX1FxlEBKUGhW/JdiPGBnbQPUXkbJiZF434A8NtLll8EtX/AMr6+RcXRJvVL93hHqYsKW/8QGX+ma7f9naUWy5+yI5sDmt9vfuARlS7mNxlBf6l7iYusT5VMD0l1FcDx61+DLDIvA/rpdgNceoiwtx5TPOeW+1FIWB6OHqu18fc0xzHjvkvGVAeqpp8j6fB5kM9cmnHnoC7QG2NHKn7MWQAcvJ2kUpEAKBSMRo0FgDYOkCGsAUJIdslKfkASOUTtSO1Ac4k3iRZHNAZpYRfQ8s0NpCx3AmsSQbLoEqAWLQbFaXY7QAHJA1HOkSyPwwNCQHFHn+rKPcV9UwDigkrZLPn1ftiJO3z9jsdJgaOnwpclnj8f+jYt9kWca+QM0cC4as8n9W/TUv3w2d7rsz22+6JZoWt90+UB8xhzOLp/wCDZjmmCeFNuL7cE49M4v8AawNcYorCFi4vjc3YsL54AzRx/c7HNo3+imSz9Nva/wAgTcbWx2JNe68eBYuueC1AVxvwasUuzMGmt19jV081L5A0vGCMBopjJAFJHNiTnQjkA0pBgyI8J0A2onORwrASx4PyxWn4A0A6nT24KWTxIvGNgRoR5KNHp8meWEALKTnkG/pmRfTb+QDDKzSp2icejop6LAz5E7IyjLz+TXPGycYb7gSin3A8CN0IJlFj9gPDlmtX2/JDDcpeyY2akv8Agl0vUK2qA+g6eNIq0Z+mdr4NLWwGbMq3FjKzTOOqN9zItgM3WdN/evqZ4xR7EY/klLpkna2+gGfFhT838m7C/II4PDFkmuQKyiI5dmPCVnZIgYs0ScHWxoyLYxzfkDRHb4F1U7TIRm13Om7A9jBnTV/g0VZ4XTdRpe56uLqF5AecPAnpMuot8MGqgM800RWaudzdJp7Pb4MuTBFcOwDj/cX0+BIeB8uSvkCeSVEqs5l8EO/ZAGOMpjOnJISDvcCrAoISxXIC2wkp+ETsNAdqYdQKJyiAJpE9J2RP4M8tSA1YtmPLqDBKUiajIBOu6F1tz28M8vpMbU9+b/J9SvBkh0i9Rz/lgaenhSNEuH8ErDJgdgfYjmx72PB0ys1bAxqVFbtWCWMGNUBTGyjVrcnjZZMCGmiikdJCtNcATzYttjz5x3PRWVrlE8+FSVx58AYonOIdIXuBGUO/JylR16diej3A0xzzXEn92L/VzXLsksaFWLyBvwfqD4e/saI5Xyt0eR6dcGrpc7Xv7PhgehGdk5cj64vtTEfyAYnPqLdLglK33pBi4oDRqOUm9kQeUbUBbHOnuPKaMk2K0/5uBtWReR/UR5yi/JXHFvYDaK5IWTUeWY83UN8bIDVOaXOxizZ74Bu+QKCAms38o0R6nzH8nR0rlCNoDVGY1EolwBFDSGrYST2AjDk1WZ4RplboBpLYhRohuKkBmTo0Y3sJOA2Hv5AMgWMw6QFo7QhqFsDP1WG91z/uY4nqtWZc3T90BknCyE4UatPkVxsDKg2PPFQri0WBNTKY75OSKwZIL4RpQJ42VT7EAURWhg2UT0sNMa2dTAaOTyN6qJOIIxfcCjmu4Y9Suy+oqw+xyxALkm5M7QHQJJ0A0qRGebwJkYq7v2A6WQGpknP6nPU9wPcdPsPjiKkXxx2AVojPk00ZpLcA447j5VuPij3FyAdDYCW1jRiPp7AQsSPJScSWR7oDROOxFZDSlsZM2LuA/qB1+TMh1LswLpe5zEiyiYBcUyE8a7oumdONgZpdMnwZsvTNG1bchmB5ihQ2lFMkCSkAyKQyAW4s8YGikyclRCM3FmhZbAWMmOpAGUkgHUGw+mvIvqvwLKVgVlJIjLIhGkSnj8MCjykJ5GnwTlGRNtoB82VVXcRS/axZvvyzoOvqANI9EvVXCO1gfTRRRMKVEMvlAGUyYmorECkXsLVgaOUgHTDrILKhtQFuTN1EOPkpGQZSugNMY7V7E5RK8AYGWeJMl6TN1CyQGSMDpmpxJZIAZ1Oi6mZXsykQL7Mjli1xwMjpgZXMm8fgpOFsXTQCVQ8ZlYST2Z08aAk433QFiHcDkwE9NjQgy6jYrhQC6GBxZRMa0BncWJL4NDFkgMkiTNEyGWCa5pgRySRmyyaVri+S+To3WrUqMObqlC1FXe2/cA53/cvkaOVJcmXHJvtd7Ui0P0vI1ey+WB9e8hymRHiwKabGFUjrANnSYkrBqAnOAuljyXgEJeQKYbs0whbTJRkWWSgNDkhdKJIKAdxORymBsBqEnEIbAyZcRn4PRlEhlxoCCkNrrkRqhHOwDlfglYdIVABYIsmCOIG6AKkhZuxZMXWA8XRRSvuT0WK4tAaEgOBJSYdYDNUTcwPfkPHAEpGbPhvjY22h1ADxM2KS7OjLD9Ocnb2R9JKAqxgefjxRgtkUXwzdDF+B3AADWI+40eAHTHaJIrGQAFcSgsmAiGlFch5OjEApFIxsWhkwHgORsZSAo0AWwNgOFSJ6znkQFdQrEWRDLKvIE8mKzNPEa3kFcgMWhhSfC+5pckdrAbHj8uzpYhXkOsCeXG12sg8TNeryHSBlg6KpjyxCaWAHEGk6gpABwA4lBHLwArx2CMGvdFYxfcDdALGBVIT1BdQDZF4GjF+SbkDcDmgwWwTgDQxxwHUGvJxwAQxxwDxYzYDgBQxxwHNk5M44CEm0I8jOOAMXfcqosBwHSyNE3mZxwHKTYyiE4B6OTAcANY6mA4CkZnSSYTgE0A0nHAdqRykjjgOsEogOAm4nKITgDsDWE4D/2Q==);
+    background-size: cover;
+    background-position: center center;
+}
+.container-fluid {
+    width: 100%;
+    box-sizing: border-box;
+} 
+
+
+/*NAV BAR
+
+/*BANNER
+
+#banner {
+    margin: auto auto 0 auto;
+}
+.banner {
+    background: url(https://c0.wallpaperflare.com/preview/111/43/764/code-coder-codes-coding.jpg);
+    background-size: cover;
+    margin: auto;
+    width: 94vw;
+    border-radius: 20px;
+    height: 30vw;
+    min-height: 200px;
+}
+
+/*PRESENTACION
+.contenedor {
+    border: 1px solid #777;
+    padding: 0px 0px 0px 0px;
+    margin-top: 5vh;
+    border-radius: 22px;
+    margin-bottom: 10vh;
+    background-color: #0f2936;
+    transition: box-shadow .5s;
+    min-width: 280px;
+}
+
+.contenedor:hover {
+    box-shadow: 0px 0px 16px 0px #222;
+    transition: box-shadow .5s;
+}
+
+.acerca-de-mi {
+    font-family: 'Sono', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 275px;
+    margin: 75px auto 0 auto;
+    color: #fff;
+    box-sizing: content-box;
+    margin-left: 90px;
+}
+
+.acerca-de-mi h4 {
+    width: 70%;
+    margin: auto;
+    font-weight: 800;
+    line-height: 30px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.acerca-de-mi p {
+    width: 70%;
+    margin: auto;
+    font-weight: 100;
+    line-height: 20px;
+    padding: auto;
+    text-align: left;
+
+}
+
+.acerca-de-mi h5 {
+    width: 70%;
+    margin: auto;
+    font-weight: 600;
+    padding: auto;
+    text-align: left;
+    min-width: 236px;
+}
+
+.acerca-de-mi p {
+    font-size: 16px;
+    line-height: 45px 10px;
+    margin-bottom: 16px;
+}
+
+.avatar-cont {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    margin: -90px;
+    justify-content: flex-start;
+    border-radius: 50%;
+    justify-content: center;
+}
+.avatar-cont i {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 5px;
+    height: 160px;
+    display: flex;
+    align-items: flex-end;
+}
+.avatar {
+    height: 180px;
+    border-radius: 50%;
+}
+
+.presentacion {
+    min-width: 260px;
+    justify-content: center;
+    width: 90vw;
+    max-width: 600px;
+    display: flex;
+    margin: auto auto auto -1vw;
+    background-position: center center;
+    border-radius: 20px;
+    transition: box-shadow 0.5s;
+}
+
+@media only screen and (max-width:600px){
+    .presentacion {
+        margin: auto;
+    }
+    .acerca-de-mi {
+        margin-left: auto;
+    }
+
+    .acerca-de-mi h4 {
+        width: 90%;
+        margin: auto;
+        font-weight: 800;
+        line-height: 30px;
+        margin-bottom: 0;
+        min-width: 265px;
+        padding: auto;
+        text-align: center;
+    }
+    
+    .acerca-de-mi p {
+        width: 90%;
+        margin: auto;
+        font-weight: 100;
+        line-height: 20px;
+        padding: auto;
+        text-align: center;
+    
+    }
+    
+    .acerca-de-mi h5 {
+        width: 80%;
+        margin: auto;
+        font-weight: 600;
+        padding: auto;
+        text-align: center;
+        min-width: 236px;
+    }
+}
+/*
+.presentacion:hover {
+    box-shadow: 0px 0px 30px 10px;
+    transition: box-shadow 0.5s;
+}
+*/
+
+/*EXPERIENCIA
+
+.accordion {
+    width: 70vw;
+    margin: 5vh auto;
+}
+.title-exp {
+    text-align: center;
+    margin: 16px auto;
+    color: #fff;
+}
+
+
+.accordion-button p {
+    color: #49C49C;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    font-weight: 500;
+    max-height: min-content;
+    width: 100%;
+    margin-left: -50px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.accordion-button img {
+    width: 50px;
+    display: flex;
+}
+
+.accordion-body {
+    margin: auto;
+    text-align: center;
+    width: 80%;
+}
+
+@media only screen and (max-width:500px){
+    .accordion-button p{
+        margin-left: -10px;
+    }
+
+    .acerca-de-mi {
+
+    }
+}
+
+/*EDUCACION
+
+.title-edu {
+    margin: 16px auto;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 5vh;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10vh;
+    width: 70vw;
+    margin: auto;
+}
+.card img {
+    width: 285px;
+    height: 165px;
+    border-bottom: 2px solid #0f2936;
+}
+.card h5 {
+    text-align: center;
+}
+.card {
+    border: 2px solid #0f2936;
+    margin: auto auto 5vh auto;
+    height: fit-content;
+    box-shadow: none;
+    transition: box-shadow 0.5s;
+}
+.card-text {
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 2px 10px 20px 5px #0f2936;
+} */

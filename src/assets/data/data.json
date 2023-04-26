@@ -1,0 +1,32 @@
+{
+    "name": "Jonathan Scorpaniti",
+    "position": "Desarrollador Fullstack",
+    "nationality": "Argentino",
+    "description": "Busco formar parte de un equipo profesional con el objetivo de aprender, ganar experiencia y profesionalizarme en el mundo IT",
+    "education" : [{
+        "school": "Argentina Programa",
+        "career": "Desarrollador FullStack",
+        "start": "2022",
+        "end": "2023"
+    },
+    {
+        "school": "Colegio del monte",
+        "career": "Escuela secundaria",
+        "start": "2015",
+        "end": "2020"
+    },
+    {
+        "school": "Comunidad Reparando",
+        "career": "Reparacion de computadoras",
+        "start": "2022",
+        "end": "2022"
+    }],
+    "experience" : [{
+        "empresa": "Notification Button",
+        "tarea" : "Realice adaptaciones para ingresar la aplicacion a la plataforma Prestashop"
+    },
+    {
+        "empresa": "Freelancer",
+        "tarea" : "Hice tareas de varios tipos, mi primer proyecto fue la creacion de una e-commmerce"
+    }]
+}

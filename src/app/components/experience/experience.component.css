@@ -1,0 +1,50 @@
+hr {
+    color: aliceblue;
+}
+h4, p, h1 {
+    color: #fff;
+    display: flex;
+}
+
+.experiencia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+}
+.name-description {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid aliceblue;
+    margin-bottom: 20px;
+    align-items: center;
+    width: 95%;
+    justify-items: center;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.name-description:first-child{
+    margin-top: 10px;
+}
+
+.name-description p {
+    text-align: left;
+    width: 70%;
+    margin: auto auto auto 0;
+}
+h4{
+    width: 100%;
+    margin: auto;
+}
+
+img {
+    max-height: 50px;
+    max-width: 50px;
+    padding-bottom: -50px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
