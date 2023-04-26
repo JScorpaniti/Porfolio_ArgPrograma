@@ -1,3 +1,5 @@
+/*---BOTON DE EDICION---*/
+
 button {
     height: min-content;
     margin-top: 10px;
@@ -41,41 +43,34 @@ button {
   text-decoration: none;
 
 }
-#banner {
-    margin: auto auto 0 auto;
-    width: 100%;
-    margin: auto;
-    
-}
-.banner {
-    background: url(https://c0.wallpaperflare.com/preview/111/43/764/code-coder-codes-coding.jpg);
-    background-size: cover;
-    margin: auto;
-    border-radius: 20px;
-    height: 20vw;
-    min-height: 200px;
-}
 
+
+/*---VISTA DE EDICION---*/
 label {
     color: #fff;
 }
 
 /*PRESENTACION*/
-.contenedor {
-    border: 1px solid #777;
+.presentacion {
+    min-width: 260px;
+    justify-content: center;
+    width: 95%;
+    display: flex;
+    margin: auto;
+}
+.contenedor1 {
     padding: 0px 0px 0px 0px;
-    margin-top: 15vh;
-    border-radius: 22px;
+    border-radius: 0 0 20px 20px;
+    margin-top: -100px;
     width: 95%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10vh;
     background-color: #0f2936;
     transition: box-shadow .5s;
     min-width: 280px;
 }
 
-.contenedor:hover {
+.contenedor1:hover {
     box-shadow: 0px 0px 16px 0px #222;
     transition: box-shadow .5s;
 }
@@ -91,7 +86,7 @@ label {
     box-sizing: content-box;
 }
 
-.acerca-de-mi h4 {
+.acerca-de-mi h4 /*TITULO*/{
     width: 95%;
     margin: auto;
     font-weight: 800;
@@ -100,17 +95,7 @@ label {
     text-align: center;
 }
 
-.acerca-de-mi p {
-    width: 95%;
-    margin: auto;
-    font-weight: 100;
-    line-height: 20px;
-    padding: auto;
-    text-align: center;
-
-}
-
-.acerca-de-mi h5 {
+.acerca-de-mi h5 /*SUBTITULO*/{
     width: 70%;
     margin: auto;
     font-weight: 600;
@@ -118,15 +103,23 @@ label {
     text-align: center;
     min-width: 236px;
 }
-
-.acerca-de-mi p {
+.acerca-de-mi p /*CONTENIDO*/{
+    width: 95%;
+    margin: auto;
+    font-weight: 100;
+    line-height: 20px;
+    padding: auto;
+    text-align: center;
     font-size: 16px;
     line-height: 45px 10px;
     margin-bottom: 16px;
     max-width: 50vw;
+
 }
 
-.avatar-cont {
+/*---AVATAR---*/
+
+.avatar-cont { 
     height: 200px;
     display: flex;
     justify-content: center;
@@ -135,27 +128,12 @@ label {
     border-radius: 50%;
     justify-content: center;
 }
-.avatar-cont i {
-    color: #fff;
-    font-size: 20px;
-    margin-left: 5px;
-    height: 160px;
-    display: flex;
-    align-items: flex-end;
-}
+
 .avatar {
     height: 180px;
     border-radius: 50%;
 }
 
-.presentacion {
-    min-width: 260px;
-    justify-content: center;
-    width: 95%;
-    display: flex;
-    margin: auto;
-    background-position: center center;
-}
 
 @media only screen and (max-width:600px){
     .presentacion {
