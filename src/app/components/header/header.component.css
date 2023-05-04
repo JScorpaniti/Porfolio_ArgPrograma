@@ -3,10 +3,8 @@ nav {
     background-color: #d7d7d7fa;
     position: fixed;
     display: inline;
-    width: 100vw;
+    width: 100%;
     margin-top: -15vh;
-    margin-left: auto;
-    margin-right: auto;
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: 2px solid #000;
@@ -58,18 +56,23 @@ nav .logos {
     width: 95%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10vh;
     background-color: #0f2936;
     transition: box-shadow .5s;
     min-width: 280px;
 }
 
-.contenedor1:hover {
-    box-shadow: 0px 0px 16px 0px #222;
-    transition: box-shadow .5s;
-}
-
 .banner {
     background: url(https://c0.wallpaperflare.com/preview/111/43/764/code-coder-codes-coding.jpg);
     background-size: cover;
+    align-items: flex-end;
+}
+
+i {
+    font-size: 30px;
+    color: #fff;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: auto;
+    margin-right: 20px;
 }

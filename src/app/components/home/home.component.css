@@ -46,7 +46,21 @@ button {
 
 
 /*---VISTA DE EDICION---*/
+form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+    margin-top: 90px;
+    margin-bottom: 0;
+}
+
+#btn-confirmar {
+    margin: 10px 0 10px 0;
+}
+
 label {
+    align-self: center;
     color: #fff;
 }
 
@@ -61,7 +75,6 @@ label {
 .contenedor1 {
     padding: 0px 0px 0px 0px;
     border-radius: 0 0 20px 20px;
-    margin-top: -100px;
     width: 95%;
     margin-left: auto;
     margin-right: auto;
@@ -87,29 +100,23 @@ label {
 }
 
 .acerca-de-mi h4 /*TITULO*/{
-    width: 95%;
-    margin: auto;
+    display: flex;
+    width: 100%;
     font-weight: 800;
     line-height: 30px;
     margin-bottom: 0;
-    text-align: center;
+    justify-content: flex-start;
 }
 
 .acerca-de-mi h5 /*SUBTITULO*/{
-    width: 70%;
-    margin: auto;
+    width: 100%;
     font-weight: 600;
-    padding: auto;
-    text-align: center;
     min-width: 236px;
 }
 .acerca-de-mi p /*CONTENIDO*/{
-    width: 95%;
-    margin: auto;
+    width: 100%;
     font-weight: 100;
     line-height: 20px;
-    padding: auto;
-    text-align: center;
     font-size: 16px;
     line-height: 45px 10px;
     margin-bottom: 16px;
@@ -122,11 +129,9 @@ label {
 .avatar-cont { 
     height: 200px;
     display: flex;
-    justify-content: center;
-    margin: -90px;
     justify-content: flex-start;
+    margin: -90px 0;
     border-radius: 50%;
-    justify-content: center;
 }
 
 .avatar {
@@ -135,43 +140,34 @@ label {
 }
 
 
-@media only screen and (max-width:600px){
+@media screen and (max-width:500px){
     .presentacion {
-        margin: auto;
-    }
-    .acerca-de-mi {
-        margin-left: auto;
+        flex-direction: column;
     }
 
     .acerca-de-mi h4 {
         width: 90%;
-        margin: auto;
         font-weight: 800;
         line-height: 30px;
         margin-bottom: 0;
         min-width: 265px;
-        padding: auto;
-        text-align: center;
     }
     
     .acerca-de-mi p {
         width: 90%;
-        margin: auto;
         font-weight: 100;
         line-height: 20px;
-        padding: auto;
-        text-align: center;
+
     
     }
     
     .acerca-de-mi h5 {
         width: 80%;
-        margin: auto;
         font-weight: 600;
-        padding: auto;
-        text-align: center;
         min-width: 236px;
     }
 }
+
+
 
 

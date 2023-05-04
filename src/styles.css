@@ -24,6 +24,104 @@ body {
     transition: box-shadow .5s;
 }
 
+/*---BOTONES---*/
+
+button {
+    height: min-content;
+    margin-top: 10px;
+    align-items: flex-end;
+    min-width: max-content;
+    margin-right: 30px;
+}
+
+
+#btn-confirmar {
+    margin: 10px 0 10px 0;
+    background: #0f2936;
+  background-image: -webkit-linear-gradient(top, #0f2936, #135c80);
+  background-image: -moz-linear-gradient(top, #0f2936, #135c80);
+  background-image: -ms-linear-gradient(top, #0f2936, #135c80);
+  background-image: -o-linear-gradient(top, #0f2936, #135c80);
+  background-image: linear-gradient(to bottom, #0f2936, #135c80);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border: 1px solid #0a1422;
+  border-radius: 8px;
+  font-family: Georgia;
+  color: #fff;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+}
+
+
+
+#btn-cancel {
+    margin: 0 0 10px auto;
+    color: #fff;
+    background-color: #f00;
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border: 1px solid #0a1422;
+    border-radius: 8px;
+    font-family: Georgia;
+    padding: 5px 10px 5px 10px;
+}
+
+.btn-edit {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 16px;
+}
+
+.btn-edit button {
+    
+    background: #0f2936;
+    background-image: -webkit-linear-gradient(top, #0f2936, #135c80);
+    background-image: -moz-linear-gradient(top, #0f2936, #135c80);
+    background-image: -ms-linear-gradient(top, #0f2936, #135c80);
+    background-image: -o-linear-gradient(top, #0f2936, #135c80);
+    background-image: linear-gradient(to bottom, #0f2936, #135c80);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border: 1px solid #0a1422;
+    border-radius: 8px;
+    font-family: Georgia;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    transition: background-image 1s;
+  }
+
+  .btn-edit button:hover {
+    
+    background: #135c80;
+    background-image: -webkit-linear-gradient(top, #135c80, #0f2936);
+    background-image: -moz-linear-gradient(top, #135c80, #0f2936);
+    background-image: -ms-linear-gradient(top, #135c80, #0f2936);
+    background-image: -o-linear-gradient(top, #135c80, #0f2936);
+    background-image: linear-gradient(to bottom, #135c80, #0f2936);
+    text-decoration: none;
+  
+  }
+  
+
+  .btn-delete button {
+    background-color: #f00;
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border: 1px solid #0a1422;
+    border-radius: 8px;
+    font-family: Georgia;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    
+    margin-bottom: 16px;
+}
+
+
 /* hr {
     opacity: 1;
     color: #0f2936;

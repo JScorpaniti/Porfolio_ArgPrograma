@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { faAmbulance } from '@fortawesome/free-solid-svg-icons';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,5 +6,4 @@ import { faAmbulance } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   title = 'front-dinamico';
-  faFacebook = faAmbulance;
 }

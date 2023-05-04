@@ -4,17 +4,48 @@
     <div class="row" >
         <div class="presentacion">
           <div class="col carta">
-            
-            <article class="experiencia" *ngFor="let experiencia of myExperience">
-            <div class="name-description">
-            <h4>{{experiencia.empresa}}</h4>
-              <p>{{experiencia.tarea}}</p>
-            </div>    
+            <!--VISTA DE EDICION-->
+            <div *ngIf="editar && editando">
+              <form  (ngSubmit)="editarExperiencia(experienciaSeleccionada.index)" #formExperiencia="ngForm">          
+              <label for="nombre">Nombre de la empresa: </label>
+              <input type="text" id="nombre" name="nombre" [(ngModel)]="experienciaSeleccionada.empresa" minlength="5" placeholder="Nombre de la empresa" required>
+              <label for="titulo">Tarea realizada: </label>
+              <input type="text" id="titulo" name="titulo" [(ngModel)]="experienciaSeleccionada.tarea" minlength="5" placeholder="Tu tarea en esta empresa" required> 
+              <input id="btn-confirmar" type="submit" value="Confirmar" [disabled]="formExperiencia.invalid" >
+              <button type="button" id="btn-cancel" (click)="cancelarEdicion()">Cancelar</button>
+              </form>
+              </div>
+
+            <!-- VISTA AGREGAR EXPERIENCIA-->  
+
+            <div *ngIf="nuevaExperiencia && editar && !editando">
+              <form (ngSubmit)="crearExperiencia()" #formNuevaExperiencia="ngForm">
+                <label for="nombre">Nombre de la empresa : </label>
+                <input type="text" id="nombre" name="nombre" [(ngModel)]="nuevaExperiencia.empresa" minlength="5" placeholder="Nombre de la empresa" required>
+                <label for="titulo">Tarea realizada: </label>
+                <input type="text" id="titulo" name="titulo" [(ngModel)]="nuevaExperiencia.tarea" minlength="5" placeholder="Tu tarea en esta empresa" required> 
+                <input id="btn-confirmar" type="submit" value="Confirmar" [disabled]="formNuevaExperiencia.invalid" >
+                <button type="button" id="btn-cancel" (click)="cancelarEdicion()">Cancelar</button>
+                
+              </form>
+            </div>
+
+
+            <article class="experiencia" *ngFor="let experiencia of myExperience; let i = index">
+              <div class="name-description" *ngIf="!editar">
+                <h4>{{experiencia.empresa}}</h4>
+                <p>{{experiencia.tarea}}</p>
+              </div> 
+              <div class="btn-edit" *ngIf="!editar"> 
+                <button (click)="editarExperiencia(i)">Editar experiencia</button>
+              </div>          
+              <div class="btn-delete" *ngIf="!editar">
+                <button (click)="eliminarExperiencia(i)">Eliminar experiencia</button>
+              </div> 
             </article>
-          </div>
-          <hr>
-          <div class="btn-edit"> 
-            <button>Editar experiencia</button>
+            <div class="btn-edit" *ngIf="!editar">
+              <button (click)="agregarExperiencia()">Agregar experiencia</button>
+            </div>
           </div>
              
         </div>

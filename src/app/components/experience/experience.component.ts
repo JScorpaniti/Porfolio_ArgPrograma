@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -15,4 +15,67 @@ export class ExperienceComponent {
       this.myExperience=data.experience;
     })
   }
+
+  editar: boolean | undefined;
+  editando: boolean | undefined;
+  experienciaSeleccionada: any;
+  experienciaOriginal: any;
+
+  editarExperiencia(indice: number) {
+    this.experienciaSeleccionada = this.myExperience.find((experiencia : any, index : number) => index === indice)
+    this.experienciaOriginal = {...this.experienciaSeleccionada};
+    if (this.editar) {
+      this.editando = false;
+      this.editar = false;
+    } else {
+      this.editando = true;
+      this.editar = true;
+    }
+
+
+    if(this.editar){
+      this.myExperience.empresa = '';
+      this.myExperience.tarea = '';
+    }
+  }
+
+  nuevaExperiencia: any = {
+    empresa: '',
+    tarea: ''
+  };
+  
+  agregarExperiencia() {
+
+    this.editar = true;
+    this.nuevaExperiencia = {
+      empresa: '',
+      tarea: ''
+    };
+  }
+
+  crearExperiencia() {
+    this.myExperience.push(this.nuevaExperiencia);
+    this.editar = false;
+  }
+
+  eliminarExperiencia(index: number) {
+    const confirmacion = confirm('Estas seguro de eliminar esta experiencia?')
+    if(confirmacion) {
+      this.myExperience.splice(index, 1)
+    }
+  }
+
+  cancelarEdicion() {
+    this.editar = false;
+    this.experienciaSeleccionada.empresa = this.experienciaOriginal.empresa;
+    this.experienciaSeleccionada.tarea = this.experienciaOriginal.tarea;
+    this.experienciaOriginal = null;
+  }
+  
+  cancelarNueva() {
+    this.nuevaExperiencia = null;
+    this.editar = false;
+    
+  }
+  
 }

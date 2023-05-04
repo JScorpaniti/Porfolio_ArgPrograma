@@ -9,16 +9,20 @@
           <img src="../../../assets/img/avatar.png" alt="" class="avatar">
         </div>
         
+        <!-- Vista de edición -->
         <div *ngIf="editar">
-          <!-- Vista de edición -->
-          <form (ngSubmit)="editarPerfil()">          
+          <form (ngSubmit)="editarPerfil()" #formPerfil="ngForm">          
           <label for="nombre">Nombre y apellido: </label>
-          <input type="text" id="nombre" name="titulo" [(ngModel)]="personalData.name" placeholder="Jonathan Scorpaniti" required> <br>
+          <input type="text" id="nombre" name="nombre" [(ngModel)]="perfilEditando.name" minlength="5" placeholder="Tu nombre y apellido aqui" required>
           <label for="titulo">Titulo: </label>
-          <input type="text" id="titulo" name="titulo" [(ngModel)]="personalData.position" placeholder="Desarrollador Fullstack" required> 
-          <input type="submit" value="Confirmar">
-        </form>
+          <input type="text" id="titulo" name="titulo" [(ngModel)]="perfilEditando.position" minlength="5" placeholder="Tu ocupacion aqui" required> 
+          <label for="titulo">Descripcion: </label>
+          <input type="text" id="descripcion" name="descripcion" [(ngModel)]="perfilEditando.description" minlength="10" placeholder="Tu descripcion aqui" required> 
+          <input id="btn-confirmar" type="submit" value="Confirmar" [disabled]="formPerfil.invalid" >
+          <button type="button" id="btn-cancel" (click)="cancelarEdicion()">Cancelar</button>
+          </form>
           </div>
+        <!--HOME PREDETERMINADO-->
         <article class="acerca-de-mi" *ngIf="!editar">
           <h4>{{personalData.name}}</h4>
           <h5>{{personalData.position}}</h5>
