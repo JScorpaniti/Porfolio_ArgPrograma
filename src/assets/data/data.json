@@ -21,6 +21,8 @@
         "start": "2022",
         "end": "2022"
     }],
+
+    
     "experience" : [{
         "empresa": "Notification Button",
         "tarea" : "Realice adaptaciones para ingresar la aplicacion a la plataforma Prestashop"
@@ -28,5 +30,29 @@
     {
         "empresa": "Freelancer",
         "tarea" : "Hice tareas de varios tipos, mi primer proyecto fue la creacion de una e-commmerce"
-    }]
+    }],
+
+
+    "habilities": [{
+        "hability": "HTML",
+        "percent": "80"
+    },
+    {
+        "hability": "CSS",
+        "percent": "70"
+    },
+    {
+        "hability": "JAVASCRIPT",
+        "percent": "50"
+    },
+    {
+        "hability": "ANGULAR",
+        "percent": "75"
+    },
+    {
+        "hability": "JAVA",
+        "percent": "65"
+    }
+]
+
 }

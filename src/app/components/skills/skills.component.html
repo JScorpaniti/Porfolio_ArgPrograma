@@ -1,0 +1,27 @@
+<div class="contenedor">
+    <h1>Habilidades</h1>
+    <hr>
+    <div class="habilidades">
+        <div *ngFor="let habilidad of mySkills" class="circulos">
+        <circle-progress
+            [percent]="habilidad.percent"
+            [radius]="100"
+            [title]="habilidad.hability"
+            [showUnits]="false"
+            [outerStrokeWidth]="10"
+            [innerStrokeWidth]="1"
+            [outerStrokeColor]="'#8cf'"
+            [innerStrokeColor]="'#3cf'"
+            [animation]="true"
+            [animationDuration]="600"
+            [showSubtitle]="false"
+            [titleColor]="'#fff'"
+            [unitsColor]="'#fff'"
+            [lazy]="true"
+        >
+        </circle-progress>
+</div>
+</div>
+    
+    
+</div>

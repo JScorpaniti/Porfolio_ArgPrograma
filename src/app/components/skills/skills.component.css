@@ -1,0 +1,20 @@
+hr {
+    width: 100%;
+    color: aliceblue;
+}
+
+.habilidades {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width:991px) {
+    .habilidades {
+        align-items: center;
+    }
+
+    .circulos{
+        margin: 10px;
+    }
+}

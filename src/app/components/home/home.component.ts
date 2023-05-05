@@ -22,6 +22,7 @@ export class HomeComponent {
   }
 
   editar: boolean | undefined;
+  editando: boolean | undefined;
   mensaje_enlace: string = 'Editar perfil';
   perfilEditando:any;
   perfilOriginal:any;
@@ -30,20 +31,18 @@ export class HomeComponent {
     this.perfilEditando = this.personalData;
     this.perfilOriginal = {...this.perfilEditando};
     if (this.editar) {
+      this.editando = false;
       this.editar = false;
     } else {
+      this.editando = true;
       this.editar = true;
     }
-  
-    // Actualizar mensaje_enlace después de actualizar editar
+
     if (this.editar) {
       this.personalData.name = '';
       this.personalData.position = '';
       this.personalData.description = '';
-      this.mensaje_enlace = 'Confirmar';
-    } else {
-      this.mensaje_enlace = 'Editar perfil';
-    }
+    } 
   }
 
   cancelarEdicion() {

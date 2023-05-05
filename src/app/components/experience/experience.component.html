@@ -19,13 +19,13 @@
             <!-- VISTA AGREGAR EXPERIENCIA-->  
 
             <div *ngIf="nuevaExperiencia && editar && !editando">
-              <form (ngSubmit)="crearExperiencia()" #formNuevaExperiencia="ngForm">
+              <form (ngSubmit)="agregarExperiencia()" #formNuevaExperiencia="ngForm">
                 <label for="nombre">Nombre de la empresa : </label>
                 <input type="text" id="nombre" name="nombre" [(ngModel)]="nuevaExperiencia.empresa" minlength="5" placeholder="Nombre de la empresa" required>
                 <label for="titulo">Tarea realizada: </label>
                 <input type="text" id="titulo" name="titulo" [(ngModel)]="nuevaExperiencia.tarea" minlength="5" placeholder="Tu tarea en esta empresa" required> 
-                <input id="btn-confirmar" type="submit" value="Confirmar" [disabled]="formNuevaExperiencia.invalid" >
-                <button type="button" id="btn-cancel" (click)="cancelarEdicion()">Cancelar</button>
+                <input id="btn-confirmar" type="submit" value="Confirmar" (click)="crearExperiencia()" [disabled]="formNuevaExperiencia.invalid" >
+                <button type="button" id="btn-cancel" (click)="cancelarNueva()">Cancelar</button>
                 
               </form>
             </div>

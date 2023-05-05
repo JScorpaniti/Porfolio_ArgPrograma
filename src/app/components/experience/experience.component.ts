@@ -20,7 +20,8 @@ export class ExperienceComponent {
   editando: boolean | undefined;
   experienciaSeleccionada: any;
   experienciaOriginal: any;
-
+  nuevaExperiencia: any;
+  
   editarExperiencia(indice: number) {
     this.experienciaSeleccionada = this.myExperience.find((experiencia : any, index : number) => index === indice)
     this.experienciaOriginal = {...this.experienciaSeleccionada};
@@ -39,14 +40,12 @@ export class ExperienceComponent {
     }
   }
 
-  nuevaExperiencia: any = {
-    empresa: '',
-    tarea: ''
-  };
+  
   
   agregarExperiencia() {
 
     this.editar = true;
+    this.editando = false;
     this.nuevaExperiencia = {
       empresa: '',
       tarea: ''
@@ -65,7 +64,7 @@ export class ExperienceComponent {
     }
   }
 
-  cancelarEdicion() {
+  cancelarEdicion(){
     this.editar = false;
     this.experienciaSeleccionada.empresa = this.experienciaOriginal.empresa;
     this.experienciaSeleccionada.tarea = this.experienciaOriginal.tarea;

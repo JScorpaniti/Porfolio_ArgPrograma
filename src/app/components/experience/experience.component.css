@@ -1,7 +1,7 @@
 hr {
     color: aliceblue;
 }
-h4, p, h1 {
+h4, p {
     color: #fff;
     display: flex;
 }
@@ -37,11 +37,6 @@ h4, p, h1 {
 h4{
     width: 100%;
     margin: auto;
-}
-
-h1 {
-    display: flex;
-    justify-content: center;
 }
 
 

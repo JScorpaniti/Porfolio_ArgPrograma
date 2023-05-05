@@ -140,13 +140,25 @@ label {
 }
 
 
-@media screen and (max-width:500px){
+
+/*---RESPONSIVE PARA CELULARES---*/
+@media screen and (max-width:991px){
+
+    .avatar-cont {
+        justify-content: center;
+    }
     .presentacion {
         flex-direction: column;
     }
 
+    .acerca-de-mi {
+        display: flex;
+    }
+
     .acerca-de-mi h4 {
-        width: 90%;
+        display: flex;
+        justify-content: center;
+        width: 100%;
         font-weight: 800;
         line-height: 30px;
         margin-bottom: 0;
@@ -154,17 +166,29 @@ label {
     }
     
     .acerca-de-mi p {
-        width: 90%;
+        
+        display: flex;
+        justify-content: center;
+        width: 100%;
         font-weight: 100;
         line-height: 20px;
+        text-align: center;
+        margin: auto;
 
     
     }
     
     .acerca-de-mi h5 {
-        width: 80%;
+        
+        display: flex;
+        justify-content: center;
+        width: 100%;
         font-weight: 600;
         min-width: 236px;
+    }
+
+    button {
+        margin: 10px 0;
     }
 }
 

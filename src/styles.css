@@ -2,7 +2,7 @@
 
 body {
     width: 100%;
-    background-color: #fff;
+    background-color: #dbfeff;
 }
 
 .contenedor {
@@ -119,6 +119,14 @@ button {
     text-decoration: none;
     
     margin-bottom: 16px;
+}
+
+h1 {
+    color: #fff;
+    display: flex;
+    margin-bottom: 0;
+    margin-top: 1rem;
+    justify-content: center;
 }
 
 
