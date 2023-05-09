@@ -1,0 +1,12 @@
+.contenedor1 {
+    padding: 0px 0px 0px 0px;
+    height: 20vh;
+    margin-top: 15vh;
+    border-radius: 20px 20px 0 0;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #0f2936;
+    transition: box-shadow .5s;
+    min-width: 280px;
+}

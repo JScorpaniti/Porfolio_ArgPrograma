@@ -1,12 +1,17 @@
 /*---NAVBAR---*/
+
+navbar{
+    margin: 0;
+    padding: 0;
+}
 nav {
     background-color: #d7d7d7fa;
     position: fixed;
+    top: 0;
     display: inline;
     width: 100%;
-    margin-top: -15vh;
-    padding-top: 0;
-    padding-bottom: 0;
+    margin: 0;
+    padding: 0;
     border-bottom: 2px solid #000;
 }
 

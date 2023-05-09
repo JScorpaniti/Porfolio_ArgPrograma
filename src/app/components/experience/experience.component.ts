@@ -11,8 +11,8 @@ export class ExperienceComponent {
   constructor( private datosPortfolio:PortfolioService){}
 
   ngOnInit() : void{
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      this.myExperience=data.experience;
+    this.datosPortfolio.getPersona().subscribe(data =>{
+      this.myExperience=data;
     })
   }
 

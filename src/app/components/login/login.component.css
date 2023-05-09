@@ -1,0 +1,23 @@
+.formulario-inicio {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+.contenedor{
+    width: 50vw;
+}
+
+hr {
+    color: aliceblue;
+    width: 100%;
+}
+
+.email{
+    margin-top: 30px;
+}
+
+label{
+    color: #fff;
+}

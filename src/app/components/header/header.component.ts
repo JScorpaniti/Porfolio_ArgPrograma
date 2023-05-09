@@ -14,6 +14,7 @@ export class HeaderComponent {
   miPortfolio:any;
 
   constructor(
+    private router:Router,
     private datosPortfolio:PortfolioService
   ){}
     faFacebook = faFacebook;
@@ -21,8 +22,13 @@ export class HeaderComponent {
     faLinkedin = faLinkedin;
 
     ngOnInit(): void {
-      this.datosPortfolio.obtenerDatos().subscribe(data =>{
+      this.datosPortfolio.getPersona().subscribe(data =>{
         this.miPortfolio=data;
       });
     }
-}
+  
+    login(){
+      this.router.navigate(['/login']);
+    }
+  }
+

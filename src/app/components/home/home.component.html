@@ -1,39 +1,9 @@
-
-    
-
-  <div class="contenedor1">
-  <div class="row">
-    <div class="presentacion">
-      <div class="col carta">
-        <div class="avatar-cont">
-          <img src="../../../assets/img/avatar.png" alt="" class="avatar">
-        </div>
-        
-        <!-- Vista de edición -->
-        <div *ngIf="editar && editando">
-          <form (ngSubmit)="editarPerfil()" #formPerfil="ngForm">          
-          <label for="nombre">Nombre y apellido: </label>
-          <input type="text" id="nombre" name="nombre" [(ngModel)]="perfilEditando.name" minlength="5" placeholder="Tu nombre y apellido aqui" required>
-          <label for="titulo">Titulo: </label>
-          <input type="text" id="titulo" name="titulo" [(ngModel)]="perfilEditando.position" minlength="5" placeholder="Tu ocupacion aqui" required> 
-          <label for="titulo">Descripcion: </label>
-          <input type="text" id="descripcion" name="descripcion" [(ngModel)]="perfilEditando.description" minlength="10" placeholder="Tu descripcion aqui" required> 
-          <input id="btn-confirmar" type="submit" value="Confirmar" [disabled]="formPerfil.invalid" >
-          <button type="button" id="btn-cancel" (click)="cancelarEdicion()">Cancelar</button>
-          </form>
-          </div>
-        <!--HOME PREDETERMINADO-->
-        <article class="acerca-de-mi" *ngIf="!editar">
-          <h4>{{personalData.name}}</h4>
-          <h5>{{personalData.position}}</h5>
-          <p>{{personalData.description}}</p>
-
-        </article>
-      </div>
-      <div class="btn-edit" *ngIf="!editar"> 
-        <button (click)="editarPerfil()">Editar perfil</button>
-      </div>
-         
-    </div>
-  </div>
-  </div>
+<app-header></app-header>
+<app-banner></app-banner>
+<app-about></app-about>
+<app-experience></app-experience>
+<app-education></app-education>
+<app-skills></app-skills>
+<app-proyectos></app-proyectos>
+<app-footer></app-footer>
+<router-outlet></router-outlet>

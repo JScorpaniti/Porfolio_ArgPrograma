@@ -15,8 +15,8 @@ export class EducationComponent {
   ){}
 
   ngOnInit() : void {
-    this.datosPortfolio.obtenerDatos().subscribe(data=>{
-      this.myEducation = data.education;
+    this.datosPortfolio.getPersona().subscribe(data=>{
+      this.myEducation = data;
     })
   }
 }

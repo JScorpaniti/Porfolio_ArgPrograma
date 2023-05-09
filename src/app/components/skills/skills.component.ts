@@ -11,8 +11,8 @@ export class SkillsComponent {
   constructor( private datosPortfolio:PortfolioService){}
 
   ngOnInit() : void{
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      this.mySkills=data.habilities;
+    this.datosPortfolio.getPersona().subscribe(data =>{
+      this.mySkills=data;
     })
   }
 
