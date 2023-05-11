@@ -2,16 +2,20 @@
 <div class="contenedor">
     <h1>Iniciar sesion</h1>
     <hr>
-<form class=" formulario-inicio">
+<form class=" formulario-inicio" #f="ngForm" (ngSubmit)="onLogin()" novalidate>
     <div class="form-group email">
-      <label for="exampleInputEmail1">Correo electronico</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresar correo electronico">
+      <label for="exampleInputEmail1">Usuario</label>
+      <input type="email" class="form-control" id="nombreUsuario" name="nombreUsuario" placeholder="Ingresar nombre de usuario" [(ngModel)]="nombreUsuario" required>
       <small id="emailHelp" class="form-text text-muted">El email no sera compartido con nadie.</small>
     </div>
     <div class="form-group password">
       <label for="exampleInputPassword1">Contraseña</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+      <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" [(ngModel)]="password" required>
     </div>
     <button type="submit" class="btn btn-primary">Ingresar</button>
   </form>
+
+  <div>
+    <p>No tienes cuenta? <a href="">Registrarse</a></p>
+  </div>
 </div>

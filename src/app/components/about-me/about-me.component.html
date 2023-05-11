@@ -24,14 +24,14 @@
           </div>
         -->
         <!--HOME PREDETERMINADO-->
-        <article class="acerca-de-mi" *ngIf="!editar">
+        <article class="acerca-de-mi" >
           <h4>{{persona.name}} {{persona.lastname}}</h4>
-          <h5></h5>
-          <p>{{persona.img}}</p>
+          <h5> </h5>
+          <p>{{persona.description}}</p>
 
         </article>
       </div>
-      <div class="btn-edit" *ngIf="!editar"> 
+      <div class="btn-edit"> 
         <button (click)="editarPerfil()">Editar perfil</button>
       </div>
          

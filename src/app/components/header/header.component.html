@@ -34,7 +34,8 @@
             <a href="http://facebook.com" target="_blank"><fa-icon style="color: #0077B5" [icon]="faLinkedin"></fa-icon></a>
           </li>
         </ul>
-          <button class="btn-login" (click)="login()">Iniciar sesion</button>
+          <button type="button" class="btn-login" (click)="login()" *ngIf="!isLogged">Iniciar sesion</button>
+          <button type="button" class="btn-login" (click)="onLogOut()" *ngIf="isLogged">Cerrar sesion</button>
       </div>
       
       </div>

@@ -17,6 +17,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { RegisterComponent } from './components/register/register.component';
+import { interceptorProvider } from './servicios/interceptor-service';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { BannerComponent } from './components/banner/banner.component';
     FooterComponent,
     HomeComponent,
     LoginComponent,
-    BannerComponent
+    BannerComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,9 @@ import { BannerComponent } from './components/banner/banner.component';
     FormsModule,
     NgCircleProgressModule.forRoot({})
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

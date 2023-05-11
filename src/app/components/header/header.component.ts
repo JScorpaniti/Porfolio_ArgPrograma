@@ -4,6 +4,7 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-header',
@@ -12,10 +13,13 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class HeaderComponent {
   miPortfolio:any;
+  isLogged = false;
+
 
   constructor(
     private router:Router,
-    private datosPortfolio:PortfolioService
+    private datosPortfolio:PortfolioService,
+    private tokenService: TokenService
   ){}
     faFacebook = faFacebook;
     faGithub = faGithub;
@@ -25,6 +29,18 @@ export class HeaderComponent {
       this.datosPortfolio.getPersona().subscribe(data =>{
         this.miPortfolio=data;
       });
+
+      if(this.tokenService.getToken()){
+        this.isLogged = true;
+      } else {
+        this.isLogged = false;
+      }
+      
+    }
+
+    onLogOut():void {
+      this.tokenService.logOut();
+      window.location.reload();
     }
   
     login(){

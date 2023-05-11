@@ -7,18 +7,20 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.css']
 })
-
 export class AboutComponent {
-  persona: persona = new persona("","","");
+  persona: persona = {
+    name: '',
+    lastname: '',
+    description: '',
+    img: ''
+  };
 
-  constructor(
-    public datosPortfolio:PortfolioService
-  ){}
+  constructor(public datosPortfolio: PortfolioService) {}
 
-  ngOnInit() : void {
-    this.datosPortfolio.getPersona().subscribe(data => {
+  ngOnInit(): void {
+    this.datosPortfolio.getPersona().subscribe((data: persona) => {
       this.persona = data;
-    })
+    });
   }
 
   editar: boolean | undefined;
@@ -41,6 +43,7 @@ export class AboutComponent {
     if (this.editar) {
       this.persona.name = '';
       this.persona.lastname = '';
+      this.persona.description = '';
       this.persona.img = '';
     } 
   }

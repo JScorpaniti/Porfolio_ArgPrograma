@@ -8,7 +8,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
-  persona: persona = new persona("","","");
+  persona: persona = new persona("","","","");
   constructor(public datosPortfolio:PortfolioService){
 }
 
