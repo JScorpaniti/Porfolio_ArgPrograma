@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="contenedor">
+    <h1>Nueva experiencia</h1>
+    <hr>
+<div >
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+      <label for="nombre">Nombre de la empresa : </label>
+      <input type="text" id="nombre" name="nombre" [(ngModel)]="empresa" minlength="5" placeholder="Nombre de la empresa" required>
+      <label for="titulo">Tarea realizada: </label>
+      <input type="text" id="titulo" name="titulo" [(ngModel)]="tarea" minlength="5" placeholder="Tu tarea en esta empresa" required> 
+      <input id="btn-confirmar" type="submit" value="Confirmar" [disabled]="f.invalid" >
+      <!-- (click)="crearExperiencia()"
+       (click)="cancelarNueva()"-->
+    </form>
+  </div>
+</div>

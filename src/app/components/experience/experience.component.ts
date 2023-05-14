@@ -1,5 +1,8 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Experience } from 'src/app/model/experience';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { SExperienciaService } from 'src/app/servicios/s-experiencia.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-experience',
@@ -7,13 +10,24 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent {
-  myExperience:any;
-  constructor( private datosPortfolio:PortfolioService){}
+  myExperience: Experience[] = [];
+  constructor( private datosPortfolio:SExperienciaService, private tokenService: TokenService){ }
+
+  isLogged = false;
 
   ngOnInit() : void{
-    this.datosPortfolio.getPersona().subscribe(data =>{
-      this.myExperience=data;
-    })
+    this.cargarExperiencia();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+  }
+
+  cargarExperiencia():void{
+    this.datosPortfolio.lista().subscribe(
+      data => {this.myExperience = data;}
+    )
   }
 
   editar: boolean | undefined;
@@ -34,33 +48,22 @@ export class ExperienceComponent {
     }
 
 
-    if(this.editar){
+    /*if(this.editar){
       this.myExperience.empresa = '';
       this.myExperience.tarea = '';
-    }
+    }*/
   }
 
   
   
-  agregarExperiencia() {
-
-    this.editar = true;
-    this.editando = false;
-    this.nuevaExperiencia = {
-      empresa: '',
-      tarea: ''
-    };
-  }
-
-  crearExperiencia() {
-    this.myExperience.push(this.nuevaExperiencia);
-    this.editar = false;
-  }
-
-  eliminarExperiencia(index: number) {
+  
+ 
+  delete(id?: number) {
     const confirmacion = confirm('Estas seguro de eliminar esta experiencia?')
     if(confirmacion) {
-      this.myExperience.splice(index, 1)
+      this.datosPortfolio.delete(id).subscribe(data =>{
+        this.cargarExperiencia();
+      })
     }
   }
 

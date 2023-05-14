@@ -18,3 +18,14 @@ hr {
         margin: 10px;
     }
 }
+
+
+.botones {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    display: flex;
+    margin: auto 10px;
+}

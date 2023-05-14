@@ -13,8 +13,10 @@ export class FooterComponent {
 }
 
 ngOnInit() : void {
-  this.datosPortfolio.getPersona().subscribe(data => {
-    this.persona = data;
+  this.datosPortfolio.getPersona().subscribe((data: persona[]) => {
+    if(data.length > 0) {
+    this.persona = data[0];
+  }
   })
 }
 }

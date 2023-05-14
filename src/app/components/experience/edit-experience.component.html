@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="contenedor" *ngIf="expLab && !editar">
+    <h1>Editar experiencia</h1>
+    <hr>
+    <div>
+        <form  (ngSubmit)="onUpdate()" novalidate #formExperiencia="ngForm">          
+        <label for="nombre">Nombre de la empresa: </label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="expLab.empresa" minlength="5" placeholder="Nombre de la empresa" required>
+        <label for="titulo">Tarea realizada: </label>
+        <input type="text" id="titulo" name="titulo" [(ngModel)]="expLab.tarea" minlength="5" placeholder="Tu tarea en esta empresa" required> 
+        <input id="btn-confirmar" type="submit" value="Confirmar" [disabled]="formExperiencia.invalid" >
+        <!--
+        <button type="button" id="btn-cancel" (click)="cancelarEdicion()">Cancelar</button>-->
+        </form>
+        </div>
+</div>

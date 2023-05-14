@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="contenedor" *ngIf="ski">
+
+    <h1>Editar habilidad</h1>
+    <hr>
+    <div>
+        <form  (ngSubmit)="onUpdate()" novalidate #formSkills="ngForm">          
+        <label for="nombre">Nombre de la habilidad </label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="ski.name" minlength="2" placeholder="Nombre de la habilidad" required>
+        <!--<label for="percent">Tarea realizada: </label>
+        <input type="text" id="percent" name="percent" [(ngModel)]="ski.percent"  placeholder="Tu tarea en esta empresa" required> -->
+
+        <label for="percent">Porcentaje:</label>
+        <select id="percent" name="percent" [(ngModel)]="ski.percent" required>
+          <option *ngFor="let value of percentageValues" [value]="value">{{ value }}</option>
+        </select>
+        <input id="btn-confirmar" type="submit" value="Confirmar" [disabled]="formSkills.invalid" >
+        <!--
+        <button type="button" id="btn-cancel" (click)="cancelarEdicion()">Cancelar</button>-->
+        </form>
+        </div>
+</div>
+

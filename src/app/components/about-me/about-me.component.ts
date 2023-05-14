@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { persona } from 'src/app/model/persona.model';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-about',
@@ -8,20 +9,18 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./about-me.component.css']
 })
 export class AboutComponent {
-  persona: persona = {
-    name: '',
-    lastname: '',
-    description: '',
-    img: ''
-  };
+  persona: persona = new persona ("","","","");
 
   constructor(public datosPortfolio: PortfolioService) {}
 
   ngOnInit(): void {
-    this.datosPortfolio.getPersona().subscribe((data: persona) => {
-      this.persona = data;
+    this.datosPortfolio.getPersona().subscribe((data: persona[]) => {
+      if (data.length > 0) {
+        this.persona = data[0];
+      }
     });
   }
+  
 
   editar: boolean | undefined;
   editando: boolean | undefined;

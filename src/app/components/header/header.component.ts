@@ -5,6 +5,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { TokenService } from 'src/app/servicios/token.service';
+import { persona } from 'src/app/model/persona.model';
 
 @Component({
   selector: 'app-header',
@@ -12,39 +13,45 @@ import { TokenService } from 'src/app/servicios/token.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  miPortfolio:any;
+  miPortfolio: persona = new persona("","","","");
   isLogged = false;
 
+  faFacebook = faFacebook;
+  faGithub = faGithub;
+  faLinkedin = faLinkedin;
 
   constructor(
-    private router:Router,
-    private datosPortfolio:PortfolioService,
+    private router: Router,
+    private datosPortfolio: PortfolioService,
     private tokenService: TokenService
-  ){}
-    faFacebook = faFacebook;
-    faGithub = faGithub;
-    faLinkedin = faLinkedin;
+  ) {}
 
-    ngOnInit(): void {
-      this.datosPortfolio.getPersona().subscribe(data =>{
-        this.miPortfolio=data;
-      });
-
-      if(this.tokenService.getToken()){
-        this.isLogged = true;
-      } else {
-        this.isLogged = false;
+  ngOnInit(): void {
+    this.datosPortfolio.getPersona().subscribe(
+      (data: persona[]) => {
+        if (data.length > 0) {
+          this.miPortfolio = data[0];
+        }
+      },
+      error => {
+        console.error('Error al obtener los datos del portfolio:', error);
+      },
+      () => {
+        if (this.tokenService.getToken()) {
+          this.isLogged = true;
+        } else {
+          this.isLogged = false;
+        }
       }
-      
-    }
-
-    onLogOut():void {
-      this.tokenService.logOut();
-      window.location.reload();
-    }
-  
-    login(){
-      this.router.navigate(['/login']);
-    }
+    );
   }
 
+  onLogOut(): void {
+    this.tokenService.logOut();
+    window.location.reload();
+  }
+
+  login() {
+    this.router.navigate(['/login']);
+  }
+}
